@@ -7,7 +7,7 @@
 // EXPRESS
 var express = require('express');
 var app = express();
-PORT = 111687
+PORT = 1687
 
 // HANDLEBARS
 const { engine } = require('express-handlebars');
@@ -30,3 +30,13 @@ var db = require('./database/db-connector');
 
 // ----- HOME ----- //
 app.get('/');
+
+
+
+
+/*
+  LISTENER
+*/
+app.listen(PORT, function(){  
+  console.log('Express started on http://localhost:' + PORT + '; press Ctrl-C to terminate.')
+});
