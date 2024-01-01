@@ -29,7 +29,20 @@ var db = require('./database/db-connector');
 ***************************/ 
 
 // ----- HOME ----- //
-app.get('/');
+app.get('/', function(req, res){
+  let query1 = `SELECT * FROM Services;`;
+
+  db.pool.query(query1, function(err, rows, fields){
+    if (err) {console.log(err); res.sendStatus(400)
+    } else {
+      let data = rows;
+      res.render('index', {
+        title: 'COAN | Central Oregon Action Network',
+        data: data
+      });
+    };
+  });
+});
 
 
 
