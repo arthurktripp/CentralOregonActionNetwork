@@ -1,0 +1,61 @@
+/* GRID: */
+div.card {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 3em);
+  grid-gap: 1em;
+}
+
+div.card-item {
+  outline: black solid 1px;
+}
+
+div.card-name {
+  grid-row: 1 / 3;
+  grid-column: 1 / 7;
+}
+
+div.card-logo {
+  grid-row: 1 / 4;
+  grid-column: 7 / -1;
+}
+
+div.card-cats {
+  grid-row: 3 / 4;
+  grid-column: 1 / 4;
+}
+
+div.card-cities {
+  grid-row: 3 / 4;
+  grid-column: 4 / 7  ;
+}
+
+div.card-desc {
+  grid-row: 4 / 8;
+  grid-column: 1 / -1;
+}
+
+div.card-buttons {
+  grid-row: 8 / -1;
+  grid-column: 1 / -1;
+}
+
+h2.card-title {
+  text-transform: uppercase;
+  font-size: 3em;
+  margin-top: 0;
+}
+
+
+/* STYLE */
+div.card {
+  background-color: #fff;
+  width: 100%;
+  padding: 1em;
+  border-radius: 3px;
+}
+
+div.card-logo img {
+  margin-left: auto;
+  margin-right: auto;
+}
