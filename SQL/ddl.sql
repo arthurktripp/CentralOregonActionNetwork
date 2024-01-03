@@ -103,6 +103,27 @@ CREATE TABLE OngoingOpps (
 		ON DELETE SET NULL
 );
 
+-- SAMPLE DATA:
+
+INSERT INTO Services (name, description, websiteURL, donateURL, getServicesURL)
+VALUES ("Housing Works", 
+	"Housing Works is the local housing authority for Deschutes, Crook and Jefferson counties. We provide affordable housing, rental assistance and new beginnings for low-and moderate-income Central Oregonians",
+	"https://housing-works.org/",
+	NULL,
+	"https://housing-works.org/find-housing-2/")
+;
+
+INSERT INTO Cities (cityName)
+VALUES ("Bend"),
+		("Sisters"),
+		("La Pine"),
+		("Redmond"),
+		("Madras"),
+		("Prineville")
+
+
+
+
 
 
 SET FOREIGN_KEY_CHECKS = 1;
