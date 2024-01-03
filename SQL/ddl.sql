@@ -119,10 +119,32 @@ VALUES ("Bend"),
 		("La Pine"),
 		("Redmond"),
 		("Madras"),
-		("Prineville")
+		("Prineville"),
+		("Sunriver");
+		
+INSERT INTO ServicesCities (serviceID, cityID)
+VALUES (1, 1),
+		(1, 3),
+		(1, 5),
+		(1, 4),
+		(1, 2)
+;
 
 
+INSERT INTO Categories (categoryName)
+VALUES ("Housing"),
+		("Environment"),
+		("Animal Welfare"),
+		("Health & Wellness"),
+		("Education"),
+		("Wildlife"),
+		("Social Services"),
+		("Legal"),
+		("Youth Services")
+;
 
+INSERT INTO ServicesCategories (serviceID, categoryID)
+VALUES (1,1);
 
 
 
