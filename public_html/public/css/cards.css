@@ -7,7 +7,7 @@ div.card {
 }
 
 div.card-item {
-  outline: black solid 1px;
+  /* outline: black solid 1px; */
 }
 
 div.card-name {
@@ -50,21 +50,55 @@ h2.card-title {
 
 /* STYLE */
 div.card {
-  background-color: #fff;
+  background-color: #eaeaea;
   width: 100%;
   padding: 1em;
   border-radius: 3px;
 }
 
+div.card-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 div.card-logo img {
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 175px;
 }
 
 div.card-name {
   position: relative;
+  background-color: #1f2263;
+  border-radius: 5px;
+  padding: 1em;
 }
 div.card-name h2 {
   position: absolute;
-  bottom: 0;
+  bottom: 5px;
+  color: #fff;
 }
+
+ul.flag-list {
+  padding: 0;
+  margin:0;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 5px;
+}
+
+ul.flag-list li {
+  /* display: inline-block; */
+  list-style: none;
+  padding: 3px 10px;
+  height: 100%;
+  font-size: 1em;
+  color: #fff;
+  background-color: #222;
+  border-radius: 5px;
+  align-self: center;
+}
+ ul.flag-list li:first-child {
+  background-color: #555;
+  font-weight: bold;
+ }

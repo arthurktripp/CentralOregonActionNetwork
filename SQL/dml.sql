@@ -1,19 +1,28 @@
 SELECT
 	Services.serviceID,
-	Services.name,
-	Services.description,
-	Services.donateURL,
-	Services.websiteURL,
-	Services.getServicesURL,
+	Services.name AS serviceName,
+	Services.description AS serviceDescription,
+	Services.donateURL AS donateURL,
+	Services.websiteURL AS websiteURL,
+	Services.getServicesURL AS getServicesURL,
 	ServicesCities.cityID,
-	Cities.cityName
+	GROUP_CONCAT(Cities.cityName) as Cities
 FROM Services
-JOIN ServicesCities on ServicesCities.serviceID = Services.serviceID
-JOIN Cities on Cities.cityID = ServicesCities.cityID;
+LEFT JOIN ServicesCities on ServicesCities.serviceID = Services.serviceID
+LEFT JOIN Cities on Cities.cityID = ServicesCities.cityID
+GROUP BY Services.serviceID;
+
 
 SELECT
     Cities.cityName
 FROM Cities
 JOIN ServicesCities ON Cities.cityID = ServicesCities.cityID
 JOIN Services ON Services.serviceID = ServicesCities.serviceID
+WHERE Services.serviceID = 1;
+
+SELECT
+	Categories.categoryName
+FROM Categories
+JOIN ServicesCategories ON ServicesCategories.categoryID = Categories.categoryID 
+JOIN Services ON Services.serviceID = ServicesCategories.serviceID
 WHERE Services.serviceID = 1;
